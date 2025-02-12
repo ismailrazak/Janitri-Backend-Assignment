@@ -20,7 +20,8 @@ class PatientView(ListCreateAPIView):
 
     def perform_create(self, serializer):
         request = self.request
-        serializer.save(user=request.user)
+        if not request.user.is_anonymous:
+            serializer.save(user=request.user)
 
 
 class PatientDetailView(RetrieveAPIView):
