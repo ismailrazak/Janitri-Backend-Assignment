@@ -3,10 +3,9 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from django.contrib.auth.admin import UserAdmin
 
-from api.models import PatientProfile, HeartData, User
+from api.models import HeartData, PatientProfile, User
 
-admin.site.register(User,UserAdmin)
+admin.site.register(User, UserAdmin)
 
-admin.site.register(PatientProfile,ModelAdmin)
-admin.site.register(HeartData,ModelAdmin)
-
+admin.site.register(PatientProfile, ModelAdmin)
+admin.site.register(HeartData, ModelAdmin)
